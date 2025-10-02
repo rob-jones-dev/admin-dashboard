@@ -27,7 +27,7 @@ a {
 }
 
 .sidebar {
-    background: #0084ff;
+    background: rgb(25 146 212);
     flex-grow: 1;
     color: #fff;
     display: flex;
@@ -103,7 +103,7 @@ nav ul li {
 }
 
 .top-bar {
-    padding: 20px;
+    padding: 20px 50px;
     display: grid;
     grid-template-rows: 1fr 2fr;;
 }
@@ -112,13 +112,56 @@ nav ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
+}
+
+.search-bar svg {
+    width: 24px;
+    height: 24px;
+    fill: #000;
+    margin-right: 10px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: rgb(226, 232, 240);
+    font-size: 18px;
+    font-weight: 300;
+    width: 45vw;
+    height: 30px;
+    margin-left: 5px;
 }
 
 .profile-cluster {
     display: flex;
     align-items: center;
     justify-content: end;
-    gap: 10px;
+    gap: 30px;
+    margin-right: 2vw
+}
+
+.profile-picture {
+    width: 3vw;
+    aspect-ratio: 1 / 1;
+}
+
+.profile-picture img {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.profile-cluster h2 {
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0;
 }
 
 .title-bar {
@@ -134,15 +177,45 @@ nav ul li {
     grid-template-columns: auto 1fr;
 }
 
-.name-container img {
+.name-container .profile-picture {
     grid-row: span 2;
+    width: 80px;
+    aspect-ratio: 1 / 1;
+    margin-right: 20px;
+}
+
+.name-container h7 {
+    align-self: end;
+}
+
+.name-container h2 {
+    margin: 0;
+    align-self: start;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 40px;
+    margin-right: 2vw;
+}
+
+.action-buttons button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100px;
+    background: rgb(25, 146, 212);
+    color: #fff;
 }
 
 .main-content {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: auto 1fr;
-    background: #b9b9b9;
+    background: rgb(226, 232, 240);
 }
 
 .projects {
