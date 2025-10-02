@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+h3 {
+    margin: 0;
+}
+
 .open-sans-main {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -34,6 +38,7 @@ a {
     flex-direction: column;
     padding: 20px 20px;
     width: 50vw;
+    z-index: 2;
 }
 
 .sidebar ul {
@@ -105,7 +110,9 @@ nav ul li {
 .top-bar {
     padding: 20px 50px;
     display: grid;
-    grid-template-rows: 1fr 2fr;;
+    grid-template-rows: 1fr 2fr;
+    box-shadow: 1px 3px 11px -1px rgba(0,0,0,0.3);
+    z-index: 1;
 }
 
 .search-bar {
@@ -216,6 +223,8 @@ nav ul li {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: auto 1fr;
     background: rgb(226, 232, 240);
+    padding: 20px 30px;
+    gap: 30px;
 }
 
 .projects {
@@ -230,5 +239,102 @@ nav ul li {
 
 .project-card {
     background: #fff;
-    min-height: 350px;
+    min-height: 150px;
+    border-radius: 7px;
+    border-left: 7px solid rgb(240 180 41);
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 1px 3px 11px -1px rgba(0,0,0,0.3);
+}
+
+.project-card h3 {
+    margin: 0 0 5px 0;
+}
+
+.project-card p {
+    margin: 0;
+    color: rgb(99 99 99)
+}
+
+.project-footer {
+    align-self: end;
+    display: flex;
+    gap: 20px;
+}
+
+.project-card svg {
+    width: 24px;
+    height: 24px;
+}
+
+.announcement-wrapper {
+    background: #fff;
+    border-radius: 7px;
+    padding: 40px 40px;
+    box-shadow: 1px 3px 11px -1px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+}
+
+.announcement-card {
+    border-bottom: 1px solid rgba(99, 99, 99, 0.5);
+}
+
+.announcement-card:last-child {
+    border-bottom: none;
+}
+
+.announcement-card:last-child p {
+    margin-bottom: 0;
+}
+
+.announcement-card h3 {
+    margin: 0 0 3px 0;
+    font-size: 14px;
+}
+
+.announcement-card p {
+    margin: 0 0 20px 0;
+    font-size: 12px;
+}
+
+.trending-wrapper {
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px 20px;
+    box-shadow: 1px 3px 11px -1px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: fit-content;
+}
+
+.trending-wrapper img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    grid-row: span 2;
+    margin-right: 10px;
+}
+
+.trending-card {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+}
+
+.trending-card h2 {
+    margin: 0 0 0 15px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.trending-name {
+    color:rgb(99 99 99)
 }
